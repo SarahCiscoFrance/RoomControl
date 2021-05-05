@@ -79,17 +79,31 @@ xapi.event.on("CallDisconnect", async (event) => {
 });
 
 
-/**
- * When 1 or more people are detected the light comes on
- */
+
 xapi.Status.RoomAnalytics.PeopleCount.Current.on(async value => {
-    if(await getAutoLightButtonStatus() == 'on'){
-        if(value > 0){
+    if (await getAutoLightButtonStatus() == 'on') {
+        if (value > 0) {
             if (await getStatus(1, IP_RELAY_LIGHT) == "0") {
                 sendCommand(1, IP_RELAY_LIGHT);
             }
+        } else {
+            if (await getStatus(1, IP_RELAY_LIGHT) == "1") {
+                sendCommand(1, IP_RELAY_LIGHT);
+            }
         }
-        else{
+    }
+});
+
+/**
+ * When a presence is detected the light comes on
+ */
+xapi.Status.RoomAnalytics.PeoplePresence.on(async presenceValue => {
+    if (await getAutoLightButtonStatus() == 'on') {
+        if (presenceValue === 'Yes') {
+            if (await getStatus(1, IP_RELAY_LIGHT) == "0") {
+                sendCommand(1, IP_RELAY_LIGHT);
+            }
+        } else {
             if (await getStatus(1, IP_RELAY_LIGHT) == "1") {
                 sendCommand(1, IP_RELAY_LIGHT);
             }
@@ -235,8 +249,8 @@ function getAutoLightButtonStatus() {
 }
 
 /**
-* Get connected navigator (touchpanel type)
-*/
+ * Get connected navigator (touchpanel type)
+ */
 function getNavigators() {
     return new Promise(resolve => {
         xapi.Status.Peripherals.ConnectedDevice.get().then(async devices => {
@@ -247,8 +261,8 @@ function getNavigators() {
 }
 
 /**
-* Update UI with navigator metrics
-*/
+ * Update UI with navigator metrics
+ */
 function update_navigator_data() {
     getNavigators().then(devices => {
         var temperature = devices[0].RoomAnalytics.AmbientTemperature;
