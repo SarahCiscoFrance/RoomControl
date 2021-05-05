@@ -4,19 +4,19 @@
 Control the elements of a room such as light and blinds with a Webex video endpoint.
 
 ## How to use 💡
-On your touch10 or Room Navigator you have a button called *IoT* when you click on it a page appear. In that page you have 4 section : 
+On your touch10 or Room Navigator you have a button called *IoT* when you click on it a page appear. On that page you have 4 section : 
 
-1. Lighting
+**1. Lighting**
 Here you can turn on/off the light. You can also automate the switching on of the light when 1 or more person are detected.
 
-2. Electric blinds
+**2. Electric blinds**
 Here you can raise or lower the blinds. You can also activate an automatic process : When a call start the blinds are lowering and when it end's the blinds go up
 
-3. Air conditioner
+**3. Air conditioner**
 In this section the metrics of temperature and humidity are the real metrics (detected by the Room Navigator) but the control of the air conditioner is fake. This is left as an example.
 
-4. BluRay
-This section is fake but this is left as an example of use case.
+**4. BluRay**
+This section is fake but this it's left as an example of use case.
 
 ## Installation 🔨
 
