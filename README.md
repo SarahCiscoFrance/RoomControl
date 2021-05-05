@@ -9,7 +9,7 @@ On your touch10 or Room Navigator you have a button called *IoT* when you click 
 
 **1. Lighting**
 
-Here you can turn on/off the light. You can also automate the switching on of the light when 1 or more person are detected.
+Here you can turn on/off the light. You can also automate the switching on of the light when a presence is detected.
 
 
 **2. Electric blinds**
