@@ -21,6 +21,7 @@ const LOGIN = ""; // Here set the login
 const PASSWD = ""; // Here set the password
 
 /********** Don't modifiy code below **************/
+xapi.config.set("RoomAnalytics PeoplePresenceDetector", "On");
 
 xapi.Command.UserInterface.Extensions.Widget.SetValue({
     Value: 'off',
