@@ -49,4 +49,5 @@ const PASSWD = ""; // Here set the password
 ```
 
 ### Install the files on the device
-Open a web browser pointing to the IP address of your room device, and sign in to the web interface (you will need a user account with 'administrator' role), and navigate to **CUSTOMIZATION** section and go to **Macro Editor**. Then click on **Import from file** and select the file *roomControl.js*. To finish go to the main page and click on **UI Extensions Editor** after that click on **Merge from file** and choose the file *roomcontrol_UI.xml* 
+1. Open a web browser pointing to the IP address of your room device, and sign in to the web interface (you will need a user account with 'administrator' role), and navigate to **CUSTOMIZATION** section and go to **Macro Editor**. 
+2. Then click on **Import from file** and select the file *roomControl.js*. To finish go to the main page and click on **UI Extensions Editor** after that click on **Merge from file** and choose the file *roomcontrol_UI.xml* 
