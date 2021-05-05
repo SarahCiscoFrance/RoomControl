@@ -17,8 +17,8 @@ const IP_RELAY_LIGHT = ""; // Here set the IP Adresse of your relay
 /**
  * CREDENTIALS OF YOUR RELAY
  */
-const LOGIN = "admin"; // Here set the login
-const PASSWD = "admin"; // Here set the password
+const LOGIN = ""; // Here set the login
+const PASSWD = ""; // Here set the password
 
 /********** Don't modifiy code below **************/
 
